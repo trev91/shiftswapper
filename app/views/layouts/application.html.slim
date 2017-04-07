@@ -37,6 +37,10 @@ html
               a href="#contact"
                 | Contact
     .container
+      p.notice
+        = notice
+      p.alert
+        = alert
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
           button.close type="button" data-dismiss="alert"
